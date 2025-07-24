@@ -1,0 +1,57 @@
+import { Injectable } from '@angular/core';
+import { Project } from '../models/project.interface';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PortfolioService {
+
+  getProjects(): Project[] {
+    return [
+      {
+        title: 'E-Commerce Platform',
+        description: 'A full-stack e-commerce solution built with Angular, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
+        technologies: ['Angular', 'Node.js', 'MongoDB', 'Stripe API'],
+        image: 'assets/project1.jpg',
+        github: 'https://github.com/GAR-DAR/ecommerce-platform',
+        demo: 'https://demo-ecommerce.com'
+      },
+      {
+        title: 'Task Management App',
+        description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+        technologies: ['React', 'Firebase', 'Material-UI', 'Socket.io'],
+        image: 'project2.jpg',
+        github: 'https://github.com/GAR-DAR/task-manager',
+        demo: 'https://demo-taskmanager.com'
+      },
+      {
+        title: 'Weather Dashboard',
+        description: 'A responsive weather dashboard with geolocation support, 7-day forecasts, and interactive charts displaying weather patterns.',
+        technologies: ['Vue.js', 'Chart.js', 'OpenWeather API', 'PWA'],
+        image: 'project3.jpg',
+        github: 'https://github.com/GAR-DAR/weather-dashboard',
+        demo: 'https://demo-weather.com'
+      }
+    ];
+  }
+
+  getPersonalInfo() {
+    return {
+      name: 'GAR-DAR',
+      title: 'Full Stack Developer',
+      bio: [
+        "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating innovative solutions and bringing ideas to life through clean, efficient code and intuitive user experiences.",
+        "With a strong background in Angular, React, Node.js, and cloud technologies, I enjoy tackling complex challenges and continuously learning new technologies to stay at the forefront of web development."
+      ],
+      skills: {
+        frontend: ['Angular', 'React', 'Vue.js', 'TypeScript', 'SCSS'],
+        backend: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Firebase']
+      },
+      contact: {
+        email: 'contact@gar-dar.dev',
+        github: 'https://github.com/GAR-DAR',
+        linkedin: 'https://linkedin.com/in/gar-dar'
+      }
+    };
+  }
+}

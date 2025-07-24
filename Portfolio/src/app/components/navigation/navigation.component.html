@@ -1,0 +1,16 @@
+<nav class="navigation">
+  <div class="nav-container">
+    <div class="logo">
+      <span>GAR-DAR</span>
+    </div>
+    <div class="nav-menu">
+      <button 
+        *ngFor="let section of sections; let i = index"
+        [class.active]="currentSection === i"
+        (click)="navigateToSection(i)"
+        class="nav-item">
+        {{ getSectionDisplayName(section) }}
+      </button>
+    </div>
+  </div>
+</nav>

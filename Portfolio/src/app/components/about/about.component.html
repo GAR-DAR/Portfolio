@@ -1,0 +1,51 @@
+<section id="about" class="section about-section">
+  <div class="section-content">
+    <div class="about-container">
+      <div class="profile-image">
+        <img src="assets/portfolio.jpg" alt="GAR-DAR Profile Picture" />
+        <div class="image-overlay"></div>
+      </div>
+      <div class="about-content">
+        <h1 class="name">Hi, I'm {{ personalInfo?.name }}</h1>
+        <h2 class="title">{{ personalInfo?.title }}</h2>
+        <div class="bio">
+          <p *ngFor="let paragraph of personalInfo?.bio">
+            {{ paragraph }}
+          </p>
+        </div>
+        <div class="skills">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-tags">
+              <span *ngFor="let skill of personalInfo?.skills?.frontend" class="skill-tag">
+                {{ skill }}
+              </span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <div class="skill-tags">
+              <span *ngFor="let skill of personalInfo?.skills?.backend" class="skill-tag">
+                {{ skill }}
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-links">
+          <a [href]="'mailto:' + personalInfo?.contact?.email" class="contact-btn">
+            <i class="icon-email"></i>
+            Contact Me
+          </a>
+          <a [href]="personalInfo?.contact?.github" class="contact-btn" target="_blank">
+            <i class="icon-github"></i>
+            GitHub
+          </a>
+          <a [href]="personalInfo?.contact?.linkedin" class="contact-btn" target="_blank">
+            <i class="icon-linkedin"></i>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
