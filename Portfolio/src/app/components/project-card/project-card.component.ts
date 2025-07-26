@@ -11,6 +11,7 @@ import { Project } from '../../models/project.interface';
 })
 export class ProjectCardComponent {
   @Input() project!: Project;
+  @Input() isReversed: boolean = false;
   @Output() linkClick = new EventEmitter<string>();
 
   openLink(url: string) {

@@ -24,9 +24,10 @@
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -40,7 +41,6 @@
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 30px;
   }
 }

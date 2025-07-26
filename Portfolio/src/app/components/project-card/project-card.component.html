@@ -1,18 +1,6 @@
-<div class="project-card">
+<div class="project-card" [class.reverse]="isReversed">
   <div class="project-image">
     <img [src]="project.image" [alt]="project.title" />
-    <div class="project-overlay">
-      <div class="project-actions">
-        <button (click)="openLink(project.github)" class="action-btn">
-          <i class="icon-github"></i>
-          Code
-        </button>
-        <button (click)="openLink(project.demo)" class="action-btn">
-          <i class="icon-external"></i>
-          Demo
-        </button>
-      </div>
-    </div>
   </div>
   <div class="project-content">
     <h3 class="project-title">{{ project.title }}</h3>
@@ -21,6 +9,16 @@
       <span *ngFor="let tech of project.technologies" class="tech-tag">
         {{ tech }}
       </span>
+    </div>
+    <div class="project-actions">
+      <button (click)="openLink(project.github)" class="action-btn">
+        <i class="icon-github"></i>
+        Code
+      </button>
+      <button (click)="openLink(project.demo)" class="action-btn">
+        <i class="icon-external"></i>
+        Demo
+      </button>
     </div>
   </div>
 </div>

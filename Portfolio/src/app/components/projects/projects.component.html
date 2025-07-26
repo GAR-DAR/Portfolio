@@ -3,8 +3,9 @@
     <h2 class="section-title">My Projects</h2>
     <div class="projects-grid">
       <app-project-card 
-        *ngFor="let project of projects" 
+        *ngFor="let project of projects; let i = index" 
         [project]="project"
+        [isReversed]="i % 2 === 1"
         (linkClick)="openLink($event)">
       </app-project-card>
     </div>
