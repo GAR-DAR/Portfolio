@@ -12,7 +12,7 @@ export class PortfolioService {
         title: 'E-Commerce Platform',
         description: 'A full-stack e-commerce solution built with Angular, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
         technologies: ['Angular', 'Node.js', 'MongoDB', 'Stripe API'],
-        image: 'assets/project1.jpg',
+        image: 'assets/Projects-pics/HunterGame/main.png',
         github: 'https://github.com/GAR-DAR/ecommerce-platform',
         demo: 'https://demo-ecommerce.com'
       },
@@ -20,7 +20,7 @@ export class PortfolioService {
         title: 'Task Management App',
         description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
         technologies: ['React', 'Firebase', 'Material-UI', 'Socket.io'],
-        image: 'project2.jpg',
+        image: 'assets/Projects-pics/PVI/image.png',
         github: 'https://github.com/GAR-DAR/task-manager',
         demo: 'https://demo-taskmanager.com'
       },
@@ -28,7 +28,15 @@ export class PortfolioService {
         title: 'Weather Dashboard',
         description: 'A responsive weather dashboard with geolocation support, 7-day forecasts, and interactive charts displaying weather patterns.',
         technologies: ['Vue.js', 'Chart.js', 'OpenWeather API', 'PWA'],
-        image: 'project3.jpg',
+        image: 'assets/Projects-pics/CourseWork/main.png',
+        github: 'https://github.com/GAR-DAR/weather-dashboard',
+        demo: 'https://demo-weather.com'
+      }, 
+      {
+        title: 'Weather Dashboard',
+        description: 'A responsive weather dashboard with geolocation support, 7-day forecasts, and interactive charts displaying weather patterns.',
+        technologies: ['Vue.js', 'Chart.js', 'OpenWeather API', 'PWA'],
+        image: 'assets/Projects-pics/CourseWork/main.png',
         github: 'https://github.com/GAR-DAR/weather-dashboard',
         demo: 'https://demo-weather.com'
       }

@@ -1,4 +1,5 @@
 <div class="project-card" [class.reverse]="isReversed">
+  <div class="project-background" [ngClass]="getProjectTheme()"></div>
   <div class="project-image">
     <img [src]="project.image" [alt]="project.title" />
   </div>
@@ -11,13 +12,9 @@
       </span>
     </div>
     <div class="project-actions">
-      <button (click)="openLink(project.github)" class="action-btn">
-        <i class="icon-github"></i>
-        Code
-      </button>
-      <button (click)="openLink(project.demo)" class="action-btn">
-        <i class="icon-external"></i>
-        Demo
+      <button (click)="openMoreDetails()" class="action-btn">
+        <i class="icon-more"></i>
+        More
       </button>
     </div>
   </div>

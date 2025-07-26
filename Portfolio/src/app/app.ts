@@ -65,9 +65,13 @@ export class App implements OnInit, OnDestroy {
           });
 
           // If section is intersecting and has significant visibility
-          if (entry.isIntersecting && entry.intersectionRatio > 0.1) { // Reduced from 0.3 to 0.1 (10% visibility)
+          // Use different thresholds for mobile vs desktop
+          const isMobile = window.innerWidth <= 768;
+          const visibilityThreshold = isMobile ? 0.1 : 0.2; // Lower threshold for mobile
+          
+          if (entry.isIntersecting && entry.intersectionRatio > visibilityThreshold) {
             if (this.currentSection !== sectionIndex) {
-              console.log(`🔄 Intersection: Changing section from ${this.currentSection} to ${sectionIndex}`);
+              console.log(`🔄 Intersection: Changing section from ${this.currentSection} to ${sectionIndex} (Mobile: ${isMobile})`);
               this.currentSection = sectionIndex;
             }
           }
@@ -75,8 +79,8 @@ export class App implements OnInit, OnDestroy {
       },
       {
         root: null, // viewport
-        rootMargin: '-10% 0px -10% 0px', // Trigger when section is 10% into viewport (more sensitive)
-        threshold: [0, 0.1, 0.3, 0.5, 0.7, 1.0] // Added 0.1 threshold for earlier detection
+        rootMargin: '-15% 0px -15% 0px', // Less restrictive for better mobile detection
+        threshold: [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0] // Added more thresholds for smoother detection
       }
     );
 
@@ -101,6 +105,19 @@ export class App implements OnInit, OnDestroy {
     }
   }
 
+  @HostListener('window:resize')
+  onResize() {
+    // Reinitialize intersection observer on screen size change
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
+        if (this.observer) {
+          this.observer.disconnect();
+        }
+        this.setupIntersectionObserver();
+      }, 100);
+    }
+  }
+
   private updateCurrentSection() {
     // Check if we're in browser environment
     if (!isPlatformBrowser(this.platformId)) {
@@ -122,7 +139,8 @@ export class App implements OnInit, OnDestroy {
       if (element) {
         const elementTop = element.offsetTop;
         const elementHeight = element.offsetHeight;
-        const threshold = elementTop - windowHeight / 3; // Changed from /2 to /3 for earlier activation
+        const isMobile = window.innerWidth <= 768;
+        const threshold = elementTop - windowHeight * (isMobile ? 0.3 : 0.4); // Different thresholds for mobile
         
         console.log(`Section ${this.sections[i]} (index ${i}):`, {
           elementTop: elementTop,

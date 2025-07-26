@@ -17,4 +17,24 @@ export class ProjectCardComponent {
   openLink(url: string) {
     this.linkClick.emit(url);
   }
+
+  openMoreDetails() {
+    // TODO: This will navigate to a detailed project page
+    // For now, leaving it empty as requested
+    console.log('More button clicked for project:', this.project.title);
+  }
+
+  getProjectTheme(): string {
+    const title = this.project.title.toLowerCase();
+    
+    if (title.includes('ecommerce') || title.includes('e-commerce')) {
+      return 'theme-ecommerce';
+    } else if (title.includes('task') || title.includes('management')) {
+      return 'theme-task';
+    } else if (title.includes('weather') || title.includes('dashboard')) {
+      return 'theme-weather';
+    } else {
+      return 'theme-default';
+    }
+  }
 }

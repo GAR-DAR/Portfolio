@@ -1,36 +1,44 @@
 <section id="about" class="section about-section">
   <div class="section-content">
-    <div class="about-container">
-      <div class="profile-image">
-        <img src="assets/portfolio.jpg" alt="GAR-DAR Profile Picture" />
-        <div class="image-overlay"></div>
+    <div class="about-main">
+      <div class="about-card">
+        <div class="about-background theme-about"></div>
+        <div class="profile-section">
+          <div class="profile-header">
+            <div class="profile-image-container">
+              <div class="profile-image">
+                <img src="assets/portfolio.jpg" alt="GAR-DAR Profile Picture" />
+              </div>
+            </div>
+            <div class="profile-intro">
+              <h1 class="name">Hi, I'm {{ personalInfo?.name }}</h1>
+              <h2 class="title">{{ personalInfo?.title }}</h2>
+            </div>
+          </div>
+          
+          <div class="profile-details">
+            <div class="bio">
+              <p *ngFor="let paragraph of personalInfo?.bio">
+                {{ paragraph }}
+              </p>
+            </div>
+            <div class="skills-section">
+              <h3>Skills</h3>
+              <div class="skill-tags">
+                <span *ngFor="let skill of personalInfo?.skills?.frontend" class="skill-tag frontend">
+                  {{ skill }}
+                </span>
+                <span *ngFor="let skill of personalInfo?.skills?.backend" class="skill-tag backend">
+                  {{ skill }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="about-content">
-        <h1 class="name">Hi, I'm {{ personalInfo?.name }}</h1>
-        <h2 class="title">{{ personalInfo?.title }}</h2>
-        <div class="bio">
-          <p *ngFor="let paragraph of personalInfo?.bio">
-            {{ paragraph }}
-          </p>
-        </div>
-        <div class="skills">
-          <div class="skill-category">
-            <h3>Frontend</h3>
-            <div class="skill-tags">
-              <span *ngFor="let skill of personalInfo?.skills?.frontend" class="skill-tag">
-                {{ skill }}
-              </span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Backend</h3>
-            <div class="skill-tags">
-              <span *ngFor="let skill of personalInfo?.skills?.backend" class="skill-tag">
-                {{ skill }}
-              </span>
-            </div>
-          </div>
-        </div>
+      
+      <div class="contact-section">
+        <h3 class="contact-title">Let's Connect</h3>
         <div class="contact-links">
           <a [href]="'mailto:' + personalInfo?.contact?.email" class="contact-btn">
             <i class="icon-email"></i>
