@@ -1,17 +1,19 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../models/project.interface';
+import { CardBackground3dComponent } from '../card-background-3d/card-background-3d.component';
 
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CardBackground3dComponent],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.css'
 })
 export class ProjectCardComponent {
   @Input() project!: Project;
   @Input() isReversed: boolean = false;
+  @Input() cardIndex: number = 0;
   @Output() linkClick = new EventEmitter<string>();
 
   openLink(url: string) {

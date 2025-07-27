@@ -1,4 +1,7 @@
-<div class="project-card" [class.reverse]="isReversed">
+<div class="project-card" [class.reverse]="isReversed" [class.lift-right]="cardIndex % 2 === 0" [class.lift-left]="cardIndex % 2 === 1">
+  <!-- 3D Card Background Component -->
+  <app-card-background-3d theme="blue-purple"></app-card-background-3d>
+  
   <div class="project-background" [ngClass]="getProjectTheme()"></div>
   <div class="project-image">
     <img [src]="project.image" [alt]="project.title" />

@@ -45,7 +45,7 @@ export class PortfolioService {
 
   getPersonalInfo() {
     return {
-      name: 'GAR-DAR',
+      name: 'GARDAR',
       title: 'Full Stack Developer',
       bio: [
         "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating innovative solutions and bringing ideas to life through clean, efficient code and intuitive user experiences.",

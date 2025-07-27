@@ -5,11 +5,15 @@
   justify-content: center;
   position: relative;
   padding: 80px 40px 40px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
 .section-content {
   max-width: 1200px;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .section-title {
@@ -21,6 +25,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.section-title:hover {
+  transform: translateZ(20px) rotateX(5deg);
 }
 
 .projects-grid {
@@ -38,6 +48,10 @@
   .section-title {
     font-size: 32px;
     margin-bottom: 40px;
+  }
+
+  .section-title:hover {
+    transform: none;
   }
 
   .projects-grid {

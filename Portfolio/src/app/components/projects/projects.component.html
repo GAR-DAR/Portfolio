@@ -1,10 +1,14 @@
 <section id="projects" class="section projects-section">
+  <!-- 3D Background Component -->
+  <app-background-3d variant="dense" theme="green-blue"></app-background-3d>
+  
   <div class="section-content">
     <h2 class="section-title">My Projects</h2>
     <div class="projects-grid">
       <app-project-card 
         *ngFor="let project of projects; let i = index" 
         [project]="project"
+        [cardIndex]="i"
         [isReversed]="i % 2 === 1"
         (linkClick)="openLink($event)">
       </app-project-card>
