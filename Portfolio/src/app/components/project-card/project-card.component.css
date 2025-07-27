@@ -99,6 +99,7 @@
 .project-title {
   font-size: 28px;
   font-weight: 700;
+  font-family: 'Goldman', sans-serif;
   margin-bottom: 0;
   color: #ffffff;
 }
@@ -106,6 +107,8 @@
 .project-description {
   font-size: 16px;
   line-height: 1.6;
+  font-family: 'Goldman', sans-serif;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 0;
 }
@@ -122,8 +125,9 @@
   background: rgba(102, 126, 234, 0.2);
   border: 1px solid rgba(102, 126, 234, 0.3);
   border-radius: 20px;
+  font-family: 'Goldman', sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -144,6 +148,7 @@
   color: #ffffff;
   border: none;
   border-radius: 30px;
+  font-family: 'Goldman', sans-serif;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;

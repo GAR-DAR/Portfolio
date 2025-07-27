@@ -3,18 +3,18 @@ import { Project } from '../models/project.interface';
 
 @Injectable({
   providedIn: 'root'
-})
+})  
 export class PortfolioService {
 
   getProjects(): Project[] {
     return [
       {
-        title: 'E-Commerce Platform',
-        description: 'A full-stack e-commerce solution built with Angular, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
-        technologies: ['Angular', 'Node.js', 'MongoDB', 'Stripe API'],
-        image: 'assets/Projects-pics/HunterGame/main.png',
-        github: 'https://github.com/GAR-DAR/ecommerce-platform',
-        demo: 'https://demo-ecommerce.com'
+        title: 'Space Hunter',
+        description: 'Players control a spaceship and fight through two action-packed levels. Each level features a fixed number of enemy pirate ships and static asteroid obstacles. To complete a level, players must destroy all enemies while avoiding the asteroids. Fast reflexes and sharp aim are the key to survival in this classic arcade-style space battle.  \nWas implemented vast amount of design patterns for learning purposes.',
+        technologies: ['C#', 'Unity', 'Singleton', 'Builder', 'Decorator', 'Abstract Factory', 'Facade', 'Flyweight','Observer', 'State', 'Template'],
+        image: 'assets/Projects-pics/HunterGame/image.png',
+        github: 'https://github.com/GAR-DAR/space-hunter',
+        demo: 'https://demo-spacehunter.com'
       },
       {
         title: 'Task Management App',
