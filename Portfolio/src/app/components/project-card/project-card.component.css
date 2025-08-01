@@ -62,7 +62,7 @@
 .project-image {
   flex: 1;
   height: 400px;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,12 +72,14 @@
 }
 
 .project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left top;
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  object-position: center;
   transition: transform 0.3s ease;
-  /* Removed transform transition for hover effect */
+  border-radius: 15px;
+  margin: 20px;
+  /* Image with natural size, centered with margin and rounding */
 }
 
 .project-card:hover .project-image img {
