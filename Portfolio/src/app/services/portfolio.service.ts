@@ -18,24 +18,24 @@ export class PortfolioService {
       },
       {
         title: 'KeepUP',
-        description: 'A web application for managing students tasks and projects. It features user authentication, task management, admin panel, chats and real-time updates using WebSockets.',
-        technologies: ['PHP', "Node.js", 'MySQL', 'MongoDB', 'Socket.io'],
+        description: 'Log in as a student to edit your profile, upload an avatar, add university info, and chat in real time with other students using Socket.io + Node.js (messages stored in MongoDB). Join group chats, share photos, and stay connected. Admins can access a control panel to manage, edit, or add student accounts. Student data is handled via Laravel and MySQL.',
+        technologies: ['Laravel', 'PHP', "Node.js", 'Socket.io', 'MySQL', 'MongoDB', 'FTP Server'],
         image: 'assets/Projects-pics/PVI/img2.png',
         github: 'https://github.com/GAR-DAR/task-manager',
         demo: 'https://demo-taskmanager.com'
       },
       {
         title: 'Course Work',
-        description: 'A responsive weather dashboard with geolocation support, 7-day forecasts, and interactive charts displaying weather patterns.',
-        technologies: ['Vue.js', 'Chart.js', 'OpenWeather API', 'PWA'],
+        description: 'Second-term coursework for Software Engineering at Lviv Polytechnic National University. The project focuses on creating a list of various types of workers with sorting and filtering options. Technologies used include C# .NET, WPF, and the MVVM pattern.',
+        technologies: ['C#', 'WPF','MVVM'],
         image: 'assets/Projects-pics/CourseWork/img2.png',
         github: 'https://github.com/GAR-DAR/weather-dashboard',
         demo: 'https://demo-weather.com'
       }, 
       {
         title: 'Gossip',
-        description: 'A responsive weather dashboard with geolocation support, 7-day forecasts, and interactive charts displaying weather patterns.',
-        technologies: ['Vue.js', 'Chart.js', 'OpenWeather API', 'PWA'],
+        description: 'Reddit-style client-server app with threaded comments, voting, and group chats. Built in C# using .NET and WPF (MVVM), with MySQL for data storage. Used Windows Sockets (TCP/IP), ZeroTier for remote access, and FTP for image transfer. Developed by a team of 8 in an Operating System lab, where I was one of the system architects.',
+        technologies: ['C#', 'WPF','MVVM', 'WinSockets', 'MySQL', 'FTP Server'],
         image: 'assets/Projects-pics/Gossip/img2.png',
         github: 'https://github.com/GAR-DAR/weather-dashboard',
         demo: 'https://demo-weather.com'
@@ -46,19 +46,20 @@ export class PortfolioService {
   getPersonalInfo() {
     return {
       name: 'GARDAR',
-      title: 'Full Stack Developer',
+      title: '.Net Developer',
       bio: [
-        "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating innovative solutions and bringing ideas to life through clean, efficient code and intuitive user experiences.",
-        "With a strong background in Angular, React, Node.js, and cloud technologies, I enjoy tackling complex challenges and continuously learning new technologies to stay at the forefront of web development."
+        'Hi there! I am GARDAR (also Iryna Hrabovenska and a student majoring in “Software Engineering”).', 
+        'I am a .Net developer with a passion for creating efficient and scalable applications. I have a strong foundation in C# and .NET technologies, and I also enjoy working on both frontend and backend development.',
+        'Always eager to learn smth new and improve my skills. But for now welcome to my portfolio, where you can explore my projects and get to know me better!'
       ],
       skills: {
-        frontend: ['Angular', 'React', 'Vue.js', 'TypeScript', 'SCSS'],
-        backend: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Firebase']
+        primary: ['C#', '.NET', 'WPF', 'Unity', 'ASP.NET Core', 'MySQL', 'MongoDB'],
+        addition: ['Angular', 'Laravel', 'PHP']
       },
       contact: {
-        email: 'contact@gar-dar.dev',
+        email: 'iryna.hrabovenska.pz.2023@lpnu.ua',
         github: 'https://github.com/GAR-DAR',
-        linkedin: 'https://linkedin.com/in/gar-dar'
+        linkedin: 'https://www.linkedin.com/in/iryna-grabovenska-8213262b7/'
       }
     };
   }

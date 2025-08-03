@@ -28,10 +28,10 @@
             <div class="skills-section">
               <h3>Skills</h3>
               <div class="skill-tags">
-                <span *ngFor="let skill of personalInfo?.skills?.frontend" class="skill-tag frontend">
+                <span *ngFor="let skill of personalInfo?.skills?.primary" class="skill-tag primary">
                   {{ skill }}
                 </span>
-                <span *ngFor="let skill of personalInfo?.skills?.backend" class="skill-tag backend">
+                <span *ngFor="let skill of personalInfo?.skills?.addition" class="skill-tag addition">
                   {{ skill }}
                 </span>
               </div>
